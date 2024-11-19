@@ -53,3 +53,16 @@
   width: auto;
   height: 60vh;
 }
+
+.predictionContainer {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.predictionContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+.predictionContainer li {
+  margin-bottom: 5px;
+}

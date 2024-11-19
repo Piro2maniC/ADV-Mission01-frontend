@@ -6,6 +6,7 @@ function ImageUploadModule() {
   const [imageFile, setImageFile] = useState(null); // Store the file object
   const [preview, setPreview] = useState(null); // Store the image preview URL
   const [prediction, setPrediction] = useState(null); // Store prediction results
+  const [insuranceQuote, setInsuranceQuote] = useState(null); // Store insurance quote
   const [isLoading, setIsLoading] = useState(false); // Track loading state
 
   // Handle file selection
@@ -32,9 +33,10 @@ function ImageUploadModule() {
     try {
       setIsLoading(true);
       setPrediction(null);
+      setInsuranceQuote(null);
 
-      // Send the image file to the backend
-      const response = await axios.post(
+      // Send the image file to the backend for prediction
+      const predictionResponse = await axios.post(
         "http://localhost:4000/api/predict",
         formData,
         {
@@ -42,10 +44,25 @@ function ImageUploadModule() {
         }
       );
 
-      setPrediction(response.data.predictions); // Update with prediction results
+      const predictions = predictionResponse.data.predictions;
+      setPrediction(predictions); // Update with prediction results
+
+      // Find the highest probability prediction
+      const bestPrediction = predictions.reduce((max, p) =>
+        p.probability > max.probability ? p : max
+      );
+
+      console.log("Best prediction:", bestPrediction);
+
+      // Fetch the insurance quote using the best prediction's tagName
+      const quoteResponse = await axios.get(
+        `http://localhost:4000/api/car/${bestPrediction.tagName}`
+      );
+
+      setInsuranceQuote(quoteResponse.data); // Update with insurance quote
     } catch (error) {
-      console.error("Error uploading file:", error);
-      alert("Failed to upload image or fetch predictions.");
+      console.error("Error processing request:", error);
+      alert("Failed to process the request. Please try again.");
     } finally {
       setIsLoading(false);
     }
@@ -86,6 +103,18 @@ function ImageUploadModule() {
               </li>
             ))}
           </ul>
+        </div>
+      )}
+      {insuranceQuote && (
+        <div className={styles.quoteContainer}>
+          <h2>Insurance Quote:</h2>
+          <p>
+            <strong>Annual Premium:</strong> {insuranceQuote["Anual Premium"]}
+          </p>
+          <p>
+            <strong>Monthly Premium:</strong>{" "}
+            {insuranceQuote["Monthly Premium"]}
+          </p>
         </div>
       )}
     </div>

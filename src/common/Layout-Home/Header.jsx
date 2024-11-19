@@ -8,6 +8,11 @@ function Header() {
       <div className={styles.logoContainer}>
         <img src={Logo} className={styles.logo} alt="Turners Cars" />
       </div>
+      <div className={styles.buttonContainer}>
+        <div className={styles.navbarButton}>LOGIN</div>
+        <div>or</div>
+        <div className={styles.navbarButton}>REGISTER</div>
+      </div>
     </div>
   );
 }

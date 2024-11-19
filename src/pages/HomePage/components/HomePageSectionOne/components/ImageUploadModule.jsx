@@ -107,7 +107,7 @@ function ImageUploadModule() {
       )}
       {insuranceQuote && (
         <div className={styles.quoteContainer}>
-          <h2>Insurance Quote:</h2>
+          <h2>Based on your vehicle's type your Insurance estamate is:</h2>
           <p>
             <strong>Annual Premium:</strong> {insuranceQuote["Anual Premium"]}
           </p>

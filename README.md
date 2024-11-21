@@ -175,6 +175,6 @@ Project Link: [https://github.com/Piro2maniC/ADV-Mission01-frontend.git](https:/
 [license-url]: https://github.com/piro2manic/mission0frontend/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/screenshot1.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/

@@ -26,13 +26,14 @@
     <img src="images/Piro2maniC.jpg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">ADV_Dev_Mission0</h3>
+<h3 align="center">ADV_Dev_Mission01</h3>
 
   <p align="center">
-    This is a web page built according to the wireframe in the Project Brief that has also been made responsive on mobile screens.
+   This is a prototype AI solution built for Turners Cars
     <br />
-    <a href="https://github.com/piro2manic/mission0frontend"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Piro2maniC/ADV-Mission01-frontend.git"><strong>Front End »</strong></a>
     <br />
+      <a href="https://github.com/Piro2maniC/ADV-Mission01-backend.git"><strong>Back End »</strong></a>
     <br />
  
   </p>
@@ -70,7 +71,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-This is a web page built according to the wireframe in the Project Brief that has also been made responsive on mobile screens.
+This Is the frontend app for the Turners AI solution prototype.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,47 +83,31 @@ This is a web page built according to the wireframe in the Project Brief that ha
 
 <!-- GETTING STARTED -->
 
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
+````
 
 ### Installation
 
 1. Clone the repo
-   ```sh
-   git clone https://github.com/piro2manic/mission0frontend.git
-   ```
+ ```sh
+ git clone https://github.com/piro2manic/mission0frontend.git
+````
+
 2. Install NPM packages
+
    ```sh
-   npm i react-router-dom
+   npm i react-router-dom axios
+
    ```
+
 3. Change git remote url to avoid accidental pushes to base project
    ```sh
-   git remote set-url origin piro2manic/mission0frontend
+   git remote set-url origin piro2manic/ADV-Mission01-frontend
    git remote -v # confirm the changes
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
-
-## Roadmap
-
-- [ ] NavBar
-- [ ] 3 link buttons and a login button
-- [ ] Welcome Section with searchbar
-- [ ] Aranged Course Tiles with image, title and description
-  - [ ] Nested Feature
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,7 +148,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 David Tolmay - davidt@missionreadyhq.com
 
-Project Link: [https://github.com/piro2manic/mission0frontend](https://github.com/piro2manic/mission0frontend)
+Project Link: [https://github.com/Piro2maniC/ADV-Mission01-frontend.git](https://github.com/piro2manic/mission0frontend)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
